@@ -16,7 +16,8 @@ public class Main {
 
     public static int fibbonaciRecursion(int n) {
         if (n == 0) {
-            return 0;
+            //return 0;     //если считать по нормальному нумерацию
+            return 1;    //если по компьютерному
         } else if (n == 1) {
             return 1;
         } else {
