@@ -15,13 +15,13 @@ public class Main {
     }
 
     public static int fibbonaciRecursion(int n) {
-        if (n == 0) {
-            //return 0;     //если считать по нормальному нумерацию
-            return 1;    //если по компьютерному
-        } else if (n == 1) {
-            return 1;
-        } else {
-            return fibbonaciRecursion(n - 1) + fibbonaciRecursion(n - 2);
-        }
+        return switch (n) {
+            case 0 ->
+                //return 0;     //если считать по нормальному нумерацию
+                    1;    //если по компьютерному
+
+            case 1 -> 1;
+            default -> fibbonaciRecursion(n - 1) + fibbonaciRecursion(n - 2);
+        };
     }
 }
